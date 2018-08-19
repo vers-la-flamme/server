@@ -52,6 +52,6 @@ config :api, Api.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "123",
-  database: "api_dev",
+  database: "vlf",
   hostname: "localhost",
   pool_size: 10

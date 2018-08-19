@@ -17,4 +17,10 @@ defmodule Vlf.Mixfile do
   defp deps do
     []
   end
+
+  defp aliases do
+    [
+      "deploy.prod": ["edeliver update production --start-deploy", "edeliver migrate production"],
+    ]
+  end  
 end
