@@ -9,7 +9,7 @@ defmodule Web.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the endpoint when the application starts
-      supervisor(WebWeb.Endpoint, []),
+      supervisor(Web.Endpoint, []),
       # Start your own worker by calling: Web.Worker.start_link(arg1, arg2, arg3)
       # worker(Web.Worker, [arg1, arg2, arg3]),
     ]
@@ -23,7 +23,7 @@ defmodule Web.Application do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    WebWeb.Endpoint.config_change(changed, removed)
+    Web.Endpoint.config_change(changed, removed)
     :ok
   end
 end

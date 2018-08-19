@@ -10,10 +10,10 @@ config :web,
   namespace: Web
 
 # Configures the endpoint
-config :web, WebWeb.Endpoint,
+config :web, Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
-  render_errors: [view: WebWeb.ErrorView, accepts: ~w(html json)],
+  render_errors: [view: Web.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Web.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
