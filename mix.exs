@@ -18,12 +18,6 @@ defmodule Vlf.Mixfile do
     ]
   end
 
-  def application do
-    [
-      extra_applications: [:edeliver]
-    ]
-  end  
-
   # Dependencies listed here are available only for this
   # project and cannot be accessed from applications inside
   # the apps folder.
@@ -31,10 +25,6 @@ defmodule Vlf.Mixfile do
   # Run "mix help deps" for examples and options.
   defp deps do
     [
-          # For deployment
-      {:distillery, "~> 1.5"},
-      {:edeliver, "~> 1.5.3"},
-
       # For tests
       {:credo, "~> 0.9.0", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.8", only: :test}
