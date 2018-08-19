@@ -39,9 +39,17 @@ end
 # will be used by default
 
 release :verslaflamme do
-  set version: current_version(:verslaflamme)
+  set version: "0.0.2"
   set applications: [
     api: :permanent,
     web: :permanent
   ]
+end
+
+release :api do
+  set version: current_version(:api)
+end
+
+release :web do
+  set version: current_version(:web)
 end
