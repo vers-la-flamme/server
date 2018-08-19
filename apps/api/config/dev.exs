@@ -47,6 +47,12 @@ config :logger, :console, format: "[$level] $message\n"
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
 
+config :api, Api.Auth.Token,
+  secret_key: "DEV_SECRET_KEY_GUARDIAN"
+
+config :api, ApiWeb.Endpoint,
+  secret_key_base: "DEV_SECRET_KEY_BASE_DEV_SECRET_KEY_BASE_DEV_SECRET_KEY_BASE_DEV_SECRET"
+
 # Configure your database
 config :api, Api.Repo,
   adapter: Ecto.Adapters.Postgres,

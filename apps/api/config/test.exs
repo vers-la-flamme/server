@@ -9,6 +9,15 @@ config :api, ApiWeb.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
+# Reduce the number of rounds so it does not slow down tests
+config :pbkdf2_elixir, :rounds, 1
+
+config :api, Api.Auth.Token,
+  secret_key: "TEST_SECRET_KEY_GUARDIAN"
+
+config :api, ApiWeb.Endpoint,
+  secret_key_base: "TEST_SECRET_KEY_BASE_TEST_SECRET_KEY_BASE_TEST_SECRET_KEY_BASE__"
+
 # Configure your database
 config :api, Api.Repo,
   adapter: Ecto.Adapters.Postgres,
